@@ -1,0 +1,89 @@
+{
+  "skill_name": "feedback_collector",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I just finished implementing the new booking grid filter component. It took a few iterations — I had to explain the sked-ui component patterns twice and correct the TypeScript generics. Collect session feedback.",
+      "expected_output": "The skill generates session summary, skill feedback (noting the sked-ui pattern knowledge gap), and project context (sked-ui patterns) auto-drafted from the scenario. It then asks for trust score and correction rate via AskUserQuestion. Saves .feedback/sessions/ file and updates .feedback/index.md.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "generates_three_drafts",
+          "text": "Skill auto-generates and presents three drafts: Session Summary, Skill Feedback, and Project Context for user confirmation"
+        },
+        {
+          "name": "mentions_sked_ui_gap",
+          "text": "Skill Feedback draft identifies the sked-ui component pattern knowledge gap and mentions the user had to explain it"
+        },
+        {
+          "name": "asks_trust_and_correction",
+          "text": "Skill asks for trust score (1-5) and correction rate (1-5) via AskUserQuestion"
+        },
+        {
+          "name": "creates_feedback_file",
+          "text": "Output shows skill created .feedback/sessions/{timestamp}-session.md file with correct YAML frontmatter (date, trust_score, correction_rate, root_cause)"
+        },
+        {
+          "name": "updates_index",
+          "text": "Output shows skill updated or created .feedback/index.md with a table entry containing date, trust score, correction rate, and link to session file"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Ok I'm done with the session. Everything worked well on the first try — the agent nailed the GraphQL query and the component structure was spot on. Let's log the session.",
+      "expected_output": "The skill generates session summary and drafts for skill feedback and project context (even if short/positive). Asks trust score (should be high) and correction rate (should be low). Since trust is high, does NOT ask root cause. Saves feedback files.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "generates_positive_summary",
+          "text": "Session Summary draft mentions successful GraphQL query implementation and component structure work"
+        },
+        {
+          "name": "generates_three_drafts_happy_path",
+          "text": "Skill still generates all three drafts (Session Summary, Skill Feedback, Project Context) even when session went well"
+        },
+        {
+          "name": "asks_trust_score_only",
+          "text": "Skill asks for trust score and correction rate but does NOT ask root cause question (since trust should be high, no low-trust penalty)"
+        },
+        {
+          "name": "creates_feedback_file_happy",
+          "text": "Output shows .feedback/sessions/{timestamp}-session.md created with root_cause field set to null (no root cause when trust is high)"
+        },
+        {
+          "name": "records_high_metrics",
+          "text": "Feedback file contains high trust_score (4-5) and low correction_rate (1-2) values"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "We're done. I had to basically rewrite the whole auth middleware the agent wrote — it didn't know we use an internal JWT lib instead of passport.js, and also got confused about the route guard pattern. Very frustrating session. Collect feedback.",
+      "expected_output": "The skill generates session summary noting the auth rewrite, skill feedback about JWT library assumption gap, and project context about the internal JWT lib and route guard pattern. Correction rate should be 4-5. Trust should be 1-2. Root cause question fires (likely 'Logic' or 'Guidance'). All saved correctly.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "identifies_knowledge_gap",
+          "text": "Skill Feedback draft identifies the agent's JWT library/passport.js assumption gap and route guard pattern confusion"
+        },
+        {
+          "name": "captures_project_knowledge",
+          "text": "Project Context draft mentions internal JWT library (not passport.js) and route guard pattern as key knowledge"
+        },
+        {
+          "name": "asks_root_cause",
+          "text": "Skill asks for root cause question because trust score is low (1-2), with options including 'Logic' and 'Guidance'"
+        },
+        {
+          "name": "records_low_metrics",
+          "text": "Feedback file contains low trust_score (1-2) and high correction_rate (4-5) reflecting the frustration and heavy rewrites"
+        },
+        {
+          "name": "saves_project_context_to_memory",
+          "text": "Skill output indicates project context about JWT library and route guards was saved to project memory for future sessions"
+        }
+      ]
+    }
+  ]
+}

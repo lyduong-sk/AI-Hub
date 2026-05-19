@@ -1,0 +1,82 @@
+[
+  {
+    "query": "I just finished implementing the filter component. Collect session feedback.",
+    "should_trigger": true
+  },
+  {
+    "query": "ok we're done with this coding session. I want to collect feedback about how well the agent performed and save it for later",
+    "should_trigger": true
+  },
+  {
+    "query": "session retrospective — let me capture what we accomplished and any issues that came up",
+    "should_trigger": true
+  },
+  {
+    "query": "the agent delivered the first version of the API endpoint. I want to mark this as the baseline before I make any changes",
+    "should_trigger": true
+  },
+  {
+    "query": "I'm going to start working on the database migration now. Before I do, can you commit what you just did with a baseline message?",
+    "should_trigger": true
+  },
+  {
+    "query": "end session feedback — trust score was about 3/5, I had to fix a few things but it mostly worked. Let me save that assessment",
+    "should_trigger": true
+  },
+  {
+    "query": "we've been working on this for a while. Let me log the session and capture what went wrong so we can improve",
+    "should_trigger": true
+  },
+  {
+    "query": "I just delivered the first working version of the auth middleware. I want to save this as a baseline so I can measure changes",
+    "should_trigger": true
+  },
+  {
+    "query": "mark base output — I want to create a checkpoint before the user reviews and edits my work",
+    "should_trigger": true
+  },
+  {
+    "query": "the implementation is done. Let me collect feedback about the session quality and what the agent struggled with",
+    "should_trigger": true
+  },
+  {
+    "query": "I need to review the code I just wrote and make sure it compiles",
+    "should_trigger": false
+  },
+  {
+    "query": "run the test suite to make sure everything is working",
+    "should_trigger": false
+  },
+  {
+    "query": "create a bug report for the issue we found. The component is crashing when the user clicks the button.",
+    "should_trigger": false
+  },
+  {
+    "query": "I want to refactor this function to be more readable. Can you help me improve the variable names?",
+    "should_trigger": false
+  },
+  {
+    "query": "let me git commit these changes with a message about what we implemented",
+    "should_trigger": false
+  },
+  {
+    "query": "I need to push this branch to GitHub and create a pull request",
+    "should_trigger": false
+  },
+  {
+    "query": "can you explain how this algorithm works? I want to understand the logic better",
+    "should_trigger": false
+  },
+  {
+    "query": "the user asked for some changes. I need to update the component to match their feedback.",
+    "should_trigger": false
+  },
+  {
+    "query": "I want to measure the performance of this code. Can you profile it and see where the bottlenecks are?",
+    "should_trigger": false
+  },
+  {
+    "query": "let me write a unit test for the new function we just created",
+    "should_trigger": false
+  }
+]
