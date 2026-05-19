@@ -1,0 +1,14 @@
+{
+  "input": {
+    "recipient": "string (required) - who receives the email",
+    "subject": "string (required) - subject line topic",
+    "purpose": "string (required) - why the email is being sent",
+    "tone": "enum (required) - one of: Professional, Friendly, Formal, Apologetic, Persuasive",
+    "key_points": ["string"] - "array (required) - main topics to cover in the email",
+    "sender_name": "string (required) - who is sending (for signature)"
+  },
+  "output": {
+    "subject": "string - refined subject line derived from input subject",
+    "email_body": "string - complete email with greeting, paragraphs, and closing signature"
+  }
+}

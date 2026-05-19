@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"/Users/ly.duong/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/4fb748f3-e09f-4488-b415-727a316ec726/95fa7ef4-9dc8-483d-bd1a-9f07d868c714/skills/skill-creator/scripts/\")",
+      "Bash(ls \"/Users/ly.duong/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/4fb748f3-e09f-4488-b415-727a316ec726/95fa7ef4-9dc8-483d-bd1a-9f07d868c714/skills/skill-creator/eval-viewer/\" && echo \"---\" && head -40 \"/Users/ly.duong/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/4fb748f3-e09f-4488-b415-727a316ec726/95fa7ef4-9dc8-483d-bd1a-9f07d868c714/skills/skill-creator/scripts/run_eval.py\")",
+      "Bash(ls \"/Users/ly.duong/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/4fb748f3-e09f-4488-b415-727a316ec726/95fa7ef4-9dc8-483d-bd1a-9f07d868c714/skills/\")",
+      "Bash(ls \"/Users/ly.duong/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/\" 2>&1)",
+      "Bash(mkdir -p \"/Users/ly.duong/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/4fb748f3-e09f-4488-b415-727a316ec726/95fa7ef4-9dc8-483d-bd1a-9f07d868c714/skills/agent-spec-reviewer-workspace/iteration-1/eval-2-l2-data-quality/without_skill/outputs/\")",
+      "Bash(mkdir -p \"/Users/ly.duong/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/4fb748f3-e09f-4488-b415-727a316ec726/95fa7ef4-9dc8-483d-bd1a-9f07d868c714/skills/agent-spec-reviewer-workspace/iteration-1/eval-1-minimal-l1/with_skill/outputs/\")",
+      "Bash(mkdir -p \"/Users/ly.duong/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/4fb748f3-e09f-4488-b415-727a316ec726/95fa7ef4-9dc8-483d-bd1a-9f07d868c714/skills/agent-spec-reviewer-workspace/iteration-1/eval-2-l2-data-quality/with_skill/outputs\")",
+      "Bash(mkdir -p \"/Users/ly.duong/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/4fb748f3-e09f-4488-b415-727a316ec726/95fa7ef4-9dc8-483d-bd1a-9f07d868c714/skills/agent-spec-reviewer-workspace/iteration-1/eval-3-l3-autonomous/with_skill/outputs\")",
+      "Bash(mkdir -p \"/Users/ly.duong/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/4fb748f3-e09f-4488-b415-727a316ec726/95fa7ef4-9dc8-483d-bd1a-9f07d868c714/skills/agent-spec-reviewer-workspace/iteration-1/eval-3-l3-autonomous/without_skill/outputs\")",
+      "Skill(anthropic-skills:skill-creator)",
+      "Skill(anthropic-skills:skill-creator:*)"
+    ]
+  }
+}

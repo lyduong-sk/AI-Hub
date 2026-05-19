@@ -1,0 +1,12 @@
+{
+  "recipient": "John Smith",
+  "subject": "Project Update",
+  "purpose": "Provide an update on the project status",
+  "tone": "Professional",
+  "key_points": [
+    "Development is 80% complete",
+    "Testing will begin next week",
+    "Project is on track for delivery"
+  ],
+  "sender_name": "Lý"
+}
